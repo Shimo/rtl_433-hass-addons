@@ -3,7 +3,7 @@ FROM ${BUILD_FROM} as builder
 
 ARG rtl433GitRevision=23.11
 
-RUN wget https://github.com/Shimo/rtl_433-hass-addons/blob/21aa97bc45c6b7984ab8ba8034014a5cdbf6f634/rtl_433_mqtt_autodiscovery/rtl_433_mqtt_hass.py -O rtl_433_mqtt_hass.py
+RUN wget https://github.com/Shimo/rtl_433-hass-addons-Custom-added-reed_open/blob/main/rtl_433_mqtt_autodiscovery/rtl_433_mqtt_hass.py -O rtl_433_mqtt_hass.py
 
 FROM ${BUILD_FROM}
 
