@@ -115,6 +115,27 @@ SKIP_KEYS = NAMING_KEYS + [ "time", "mic", "mod", "freq", "sequence_num",
 # @todo - Model specific definitions might be needed
 
 mappings = {
+    "contact_open": {
+        "device_type": "binary_sensor",
+        "object_suffix": "contact",
+        "config": {
+            "device_class": "opening",
+            "name": "Contact Open",
+            "payload_on": "1",
+            "payload_off": "0"
+        }
+    },
+    
+    "reed_open": {
+        "device_type": "binary_sensor",
+        "object_suffix": "reed",
+        "config": {
+            "device_class": "opening",
+            "name": "Reed Open",
+            "payload_on": "1",
+            "payload_off": "0"
+        }
+    },
     "temperature_C": {
         "device_type": "sensor",
         "object_suffix": "T",
@@ -354,26 +375,6 @@ mappings = {
         }
     },
 
-    "reed_open": {
-        "device_type": "binary_sensor",
-        "object_suffix": "reed_open",
-        "config": {
-            "device_class": "safety",
-            "force_update": "true",
-            "payload_on": "1",
-            "payload_off": "0"
-        }
-    },
-    "contact_open": {
-        "device_type": "binary_sensor",
-        "object_suffix": "reed_open",
-        "config": {
-            "device_class": "safety",
-            "force_update": "true",
-            "payload_on": "1",
-            "payload_off": "0"
-        }
-    },
     "rssi": {
         "device_type": "sensor",
         "object_suffix": "rssi",
