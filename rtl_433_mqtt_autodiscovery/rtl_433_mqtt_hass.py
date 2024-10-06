@@ -117,25 +117,33 @@ SKIP_KEYS = NAMING_KEYS + [ "time", "mic", "mod", "freq", "sequence_num",
 mappings = {
     "contact_open": {
         "device_type": "binary_sensor",
-        "object_suffix": "contact",
+        "object_suffix": "contact_open",
         "config": {
-            "device_class": "opening",
-            "name": "Contact Open",
+            "device_class": "door",
+            "force_update": "true",
             "payload_on": "1",
             "payload_off": "0"
         }
     },
-    
     "reed_open": {
         "device_type": "binary_sensor",
-        "object_suffix": "reed",
+        "object_suffix": "reed_open",
         "config": {
-            "device_class": "opening",
-            "name": "Reed Open",
+            "device_class": "door",
+            "force_update": "true",
             "payload_on": "1",
             "payload_off": "0"
         }
     },
+    "heartbeat": {
+        "device_type": "sensor",
+        "object_suffix": "heartbeat",
+        "config": {
+            "name": "Heartbeat",
+            "value_template": "{{ value|float }}"
+        }
+    },
+
     "temperature_C": {
         "device_type": "sensor",
         "object_suffix": "T",
