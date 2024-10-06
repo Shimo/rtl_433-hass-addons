@@ -22,3 +22,6 @@ This is a collection of Home Assistant add-ons that work with [rtl_433](https://
   3. Merge the PR into `main` to actually promote the release to end users. Note the new version(s) in the commit message.
     - Note we do not tag `main` in git, since each addon has it's own version number.
   4. Create a new branch off of `main` setting the addon versions back to `next`. Create a PR to merge `main` into `next` to reconcile the branches.
+## Modifications
+* Added json key for reed_open from contact sensors to rtl_433_mqtt_hass.py for rtl_433 MQTT Auto Discovery 
+* Changed py script source in dockerfile to new file
